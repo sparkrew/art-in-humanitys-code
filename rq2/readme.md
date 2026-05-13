@@ -1,0 +1,10 @@
+- RQ2 
+  - smapling script: select random json sample 
+  - GH query script: collect data from GH to have rich sample
+  - script to query geoapify
+  - script to reverse query geoapify for countries? depends on final map choices
+  - json for the sample (&data cleaning part 1)
+  - script to simplify the data
+  - notebook to clean (part 2)
+  - json used for the map
+  - notebook for the map

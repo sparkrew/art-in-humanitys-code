@@ -1,0 +1,3 @@
+  - script to clean scd
+  - script to deduplicate
+  - jq + notebook for the 'doughtnut' plot

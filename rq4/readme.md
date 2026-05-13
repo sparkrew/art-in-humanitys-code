@@ -1,0 +1,5 @@
+- RQ4 (yogya, roxana)
+  - script to get top 42
+  - 42top.json
+  - topics-notes.csv
+  - python script to generate the plot
