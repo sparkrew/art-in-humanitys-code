@@ -1,0 +1,22 @@
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+
+stages:
+  - build
+
+rust-latest:
+  stage: build
+  image: rust:latest
+  script:
+    - apt-get update && apt-get install -y build-essential jq libclang-dev zstd
+    - cargo build --verbose
+    - cargo test --verbose
+
+# rust-nightly:
+#   stage: build
+#   image: rustlang/rust:nightly
+#   script:
+#     - apt-get update && apt-get install -y build-essential libclang-dev zstd
+#     - cargo build --verbose
+#     - cargo test --verbose
+#   allow_failure: true

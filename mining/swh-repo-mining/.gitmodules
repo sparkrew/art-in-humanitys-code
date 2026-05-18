@@ -1,0 +1,3 @@
+[submodule "testdata"]
+	path = testdata
+	url = https://gitlab.com/zacchiro/swh-repo-mining-data.git
