@@ -4,5 +4,5 @@
   - script to query geoapify
   - script to reverse query geoapify for countries? depends on final map choices
   - json for the sample (&data cleaning part 1)
-  - script to simplify the data
+  - locationIndex_script to simplify the data
   - notebook to clean (part 2), produce json used for the map and code for the map and plot: [Observable Notebook](https://observablehq.com/@sparkrew/art-in-swh-rq2)
