@@ -7,5 +7,6 @@ The data folder includes:
 The scripts folder includes
  - the script to randomly sample 1% of the repositories related to p5.js
  - the prompt for the LLM-based characterization of the p5 sketches
+ - the scripts to run the LLM-based characterization of the p5 sketches on the [calcul québec](https://www.calculquebec.ca/) computing infrastructure
  - the script to collect the artifacts and libraries in the sketch folders
  - the scripts to generate the plots in the paper
