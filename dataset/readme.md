@@ -1,3 +1,3 @@
   - script to clean scd
-  - script to deduplicate
+  - find_duplicates.py & clean_duplicates.py: The script to find and clean duplicates
   - jq + notebook for the 'doughtnut' plot
