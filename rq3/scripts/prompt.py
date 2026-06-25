@@ -2,21 +2,21 @@ optimized_prompt = """Using this prompt:
 You classify p5.js source code and return ONLY a JSON object.
 
 Output format:
-{"entities":[],"interaction":[],"outcome":[]}
+{"material_and_process":[],"interaction":[],"outcome":[]}
 
 Rules for output:
 - Return valid JSON only.
 - No markdown.
 - No explanation.
 - No extra text before or after the JSON.
-- entities: array of 1+ tags when the sketch has any visible or audible output; use [] only if there is truly no perceptible artwork output
+- material_and_process: array of 1+ tags when the sketch has any visible or audible output; use [] only if there is truly no perceptible artwork output
 - interaction: array with exactly 1 tag, either "yes" or "no"
 - outcome: array with 1+ modality tags and exactly 1 time tag
 - If "auditory" is present, "time_based" must also be present
 
 The ONLY allowed tags for each category are:
 
-entities:
+material_and_process:
 - "processed_audio"
 - "processed_image"
 - "processed_text"
@@ -37,7 +37,7 @@ outcome:
 
 How to classify
 
-entities
+material_and_process
 - processed_audio: uses preexisting audio material or live audio input
     Examples: loadSound(), audio files, microphone, audio capture, reading or transforming existing audio
 - processed_image: uses preexisting visual material or live visual input
@@ -92,7 +92,7 @@ Search the entire source code for any of these:
 - shuffle
 - random2D
 
-If ANY of them appears in executable code, then entities MUST include "randomness".
+If ANY of them appears in executable code, then material_and_process MUST include "randomness".
 Do not count occurrences inside comments, strings, filenames, URLs, or tutorial/reference text.
 
 Important:
@@ -143,12 +143,12 @@ Important inference rules
 - If interaction changes the canvas, DOM display, background, colors, shapes, text, images, sprites, sound, or any variable used to draw/play output, use time_based
 
 ENTITY COMPLETENESS RULE
-Do not return "entities": [] when the sketch has visible or audible output.
-If outcome includes "visual", entities MUST include at least one visual entity.
+Do not return "material_and_process": [] when the sketch has visible or audible output.
+If outcome includes "visual", material_and_process MUST include at least one visual entity.
 
 Again, the ONLY allowed tags are:
 
-entities:
+material_and_process:
 - "processed_audio"
 - "processed_image"
 - "processed_text"
@@ -169,7 +169,7 @@ outcome:
 
 Return only the JSON object using the following template:
     {
-    "entities": [...],
+    "material_and_process": [...],
     "interaction": [...],
     "outcome": [...]
     } 
